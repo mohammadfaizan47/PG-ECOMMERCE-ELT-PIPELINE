@@ -50,5 +50,63 @@ STEP 3) → Commit this structure to GitHub
                  /~ git commit -m "feat: describe what you did"
                  /~ git push origin feat/your-file-name		
 
+STEP 4) → Update .gitignore
+           • Open .gitignore and add these lines at the bottom:
+                 # Environment variables
+                 .env
+
+                 # Project personal notes
+                 project_guide.txt
+
+                 # Power BI cache
+                 *.pbix
+
+                 # Python cache
+                 __pycache__/
+                 *.pyc
+                 *.pyo
+
+                 # VS Code
+                 .vscode/
+
+                 # Airflow logs
+                 logs/
+                 airflow.db
+                 airflow.cfg
+
+                 # OS files
+                 .DS_Store
+                 Thumbs.db
+           • Save it, then run it on terminal:
+                 /~ git checkout -b feat/BRANCH_NAME
+                 /~ git add .gitignore
+                 /~ git commit -m "chore: update gitignore with project-specific exclusions"
+                 /~ git push origin feat/BRANCH_NAME
+
+           • To switch between branches:
+                 /~ git branch
+                 /~ git checkout main
+                 /~ git checkout feat/BRANCH_NAME				 
+			     /~ git branch -d feat/BRANCH_NAME (delete locally)
+				 /~ git push origin --delete feat/BRANCH_NAME (delete on GitHub)
 				 
-			    
+STEP 5) → Fill in requirements.txt
+           • Open requirements.txt in VS Code and add:
+		         # Data generation
+                 faker==37.1.0
+                 psycopg2-binary==2.9.10
+
+                 # AWS
+                 boto3==1.38.0
+
+                 # Data quality
+                 great-expectations==1.4.4
+
+                 # Testing
+                 pytest==8.3.5
+                 pytest-mock==3.14.0
+
+                 # Utilities
+                 python-dotenv==1.1.0
+                 pyyaml==6.0.2
+                 requests==2.32.3
