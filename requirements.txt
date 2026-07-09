@@ -1,1 +1,20 @@
 D:\Data_Engineering_Internship_prep\Projects\PG-ECOMMERCE-ELT-PIPELINE\Makefile
+
+# Data generation
+faker==37.1.0
+psycopg2-binary==2.9.10
+
+# AWS
+boto3==1.38.0
+
+# Data quality
+great-expectations==1.4.4
+
+# Testing
+pytest==8.3.5
+pytest-mock==3.14.0
+
+# Utilities
+python-dotenv==1.1.0
+pyyaml==6.0.2
+requests==2.32.3
