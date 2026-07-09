@@ -1,0 +1,14 @@
+
+
+
+
+
+STEP 1) → Create your GitHub Repository
+           • Repo name: REPO-NAME
+		   • Description: REPO-RELATED
+		   • Visibility: Public (showcasing to the recruiters)
+		   • Initializing: Add README file
+		   • .gitignore: select "Python" from dropdown
+		   • License: MIT
+		   
+STEP 2) → 
