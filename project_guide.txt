@@ -3,7 +3,8 @@
 
 
 
-STEP 1) → Create your GitHub Repository
+STEP 1) → Create your GitHub Repository:
+
            • Repo name: REPO-NAME
 		   • Description: REPO-RELATED
 		   • Visibility: Public (showcasing to the recruiters)
@@ -11,4 +12,43 @@ STEP 1) → Create your GitHub Repository
 		   • .gitignore: select "Python" from dropdown
 		   • License: MIT
 		   
-STEP 2) → 
+STEP 2) → Create a Structural theme on VS Code editor:
+
+           • Open Powershell in your Desktop:
+		         /~ cd PATH_WHERE_YOU_HAVE_CREATED_THE_FOLDER_LOCALLY
+			     /~ code .
+			   
+		   • Open VS Code and Open Terminal of VS Code:
+		      - Folders creation:
+		         /~ mkdir dags
+			     /~ mkdir tasks
+			     /~ mkdir notebooks
+			     /~ mkdir expectations
+			     /~ mkdir config
+			     /~ mkdir docs
+			     /~ mkdir tests
+			  - root-level files creation:
+			     /~ New-Item .env.example -ItemType File
+				 /~ New-Item Makefile -ItemType File
+				 /~ New-Item requirements.txt -ItemType File
+				 /~ New-Item project_guide.txt -ItemType File
+				 
+STEP 3) → Commit this structure to GitHub
+           • Initializing Git and connecting to your GitHub repo:
+                 /~ git init
+                 /~ git remote add origin URL_OF_YOUR_GITHUB_REPO
+                 /~ git fetch origin
+                 /~ git checkout main
+           • Now, push it
+                 /~ git add .
+                 /~ git commit -m "feat: initialize project structure with all folders and base files"
+                 /~ git push origin main
+
+           • If we want to modify any file and commit it via VS Code then we have to do it like:
+                 /~ git checkout -b feat/your-file-name
+                 /~ git add .
+                 /~ git commit -m "feat: describe what you did"
+                 /~ git push origin feat/your-file-name		
+
+				 
+			    
