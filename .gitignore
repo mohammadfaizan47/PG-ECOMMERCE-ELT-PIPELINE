@@ -216,3 +216,29 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Environment variables
+.env
+
+# Project personal notes
+project_guide.txt
+
+# Power BI cache
+*.pbix
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code
+.vscode/
+
+# Airflow logs
+logs/
+airflow.db
+airflow.cfg
+
+# OS files
+.DS_Store
+Thumbs.db
