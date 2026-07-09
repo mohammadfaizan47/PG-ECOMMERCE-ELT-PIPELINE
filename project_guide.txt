@@ -42,5 +42,13 @@ STEP 3) → Commit this structure to GitHub
            • Now, push it
                  /~ git add .
                  /~ git commit -m "feat: initialize project structure with all folders and base files"
-                 /~ git push origin main				 
+                 /~ git push origin main
+
+           • If we want to modify any file and commit it via VS Code then we have to do it like:
+                 /~ git checkout -b feat/your-file-name
+                 /~ git add .
+                 /~ git commit -m "feat: describe what you did"
+                 /~ git push origin feat/your-file-name		
+
+				 
 			    
