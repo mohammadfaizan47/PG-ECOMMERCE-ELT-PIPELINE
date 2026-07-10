@@ -1,0 +1,13 @@
+generation:
+  num_users: 500
+  num_products: 200
+  num_orders: 2000
+  num_order_items: 5000
+  inventory_per_product: 100
+
+schedule:
+  interval_hours: 6
+
+soft_delete:
+  enabled: true
+  delete_ratio: 0.02

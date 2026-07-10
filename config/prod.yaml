@@ -1,0 +1,23 @@
+environment: prod
+
+database:
+  host: ${RDS_HOST}
+  port: 5432
+  name: ecommerce_db
+  schema: public
+
+s3:
+  bucket: ecommerce-elt-pipeline-prod
+  bronze_prefix: bronze/prod/
+  silver_prefix: silver/prod/
+  gold_prefix: gold/prod/
+
+databricks:
+  catalog: ecommerce_prod
+  schema_bronze: bronze
+  schema_silver: silver
+  schema_gold: gold
+
+airflow:
+  dag_id: ecommerce_pipeline
+  schedule: "0 2 * * *"
