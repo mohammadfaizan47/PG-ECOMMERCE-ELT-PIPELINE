@@ -1,0 +1,1 @@
+from tasks import faker_generator
