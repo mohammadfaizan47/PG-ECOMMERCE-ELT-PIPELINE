@@ -3,7 +3,6 @@ import random
 from datetime import datetime, timezone
 from faker import Faker
 
-# Setup logging
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s — %(levelname)s — %(message)s"
@@ -11,7 +10,6 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 fake = Faker()
-
 
 def generate_users(num_users: int) -> list[dict]:
     """Generate fake user records."""
@@ -23,9 +21,7 @@ def generate_users(num_users: int) -> list[dict]:
             "email": fake.unique.email(),
             "phone": fake.phone_number(),
             "address": fake.address().replace("\n", ", "),
-            "created_at": fake.date_time_between(
-                start_date="-2y", end_date="now"
-            ),
+            "created_at": fake.date_time_between(start_date="-2y", end_date="now"),
             "updated_at": datetime.now(timezone.utc),
             "is_deleted": False
         })
@@ -36,10 +32,7 @@ def generate_users(num_users: int) -> list[dict]:
 def generate_products(num_products: int) -> list[dict]:
     """Generate fake product records."""
     logger.info(f"Generating {num_products} products...")
-    categories = [
-        "Electronics", "Clothing", "Books",
-        "Home & Kitchen", "Sports", "Beauty"
-    ]
+    categories = ["Electronics", "Clothing", "Books", "Home & Kitchen", "Sports", "Beauty"]
     products = []
     for _ in range(num_products):
         products.append({
@@ -47,9 +40,7 @@ def generate_products(num_products: int) -> list[dict]:
             "category": random.choice(categories),
             "price": round(random.uniform(10.0, 5000.0), 2),
             "description": fake.text(max_nb_chars=200),
-            "created_at": fake.date_time_between(
-                start_date="-2y", end_date="now"
-            ),
+            "created_at": fake.date_time_between(start_date="-2y", end_date="now"),
             "updated_at": datetime.now(timezone.utc),
             "is_deleted": False
         })
@@ -66,10 +57,8 @@ def generate_orders(num_orders: int, user_ids: list[int]) -> list[dict]:
         orders.append({
             "user_id": random.choice(user_ids),
             "status": random.choice(statuses),
-            "total_amount": 0.0,  # updated after order_items generated
-            "created_at": fake.date_time_between(
-                start_date="-1y", end_date="now"
-            ),
+            "total_amount": 0.0,
+            "created_at": fake.date_time_between(start_date="-1y", end_date="now"),
             "updated_at": datetime.now(timezone.utc),
             "is_deleted": False
         })
@@ -77,11 +66,7 @@ def generate_orders(num_orders: int, user_ids: list[int]) -> list[dict]:
     return orders
 
 
-def generate_order_items(
-    num_items: int,
-    order_ids: list[int],
-    product_ids: list[int]
-) -> list[dict]:
+def generate_order_items(num_items: int, order_ids: list[int], product_ids: list[int]) -> list[dict]:
     """Generate fake order item records linked to real order and product IDs."""
     logger.info(f"Generating {num_items} order items...")
     items = []
