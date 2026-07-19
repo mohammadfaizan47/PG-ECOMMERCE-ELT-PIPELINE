@@ -1,8 +1,6 @@
-D:\Data_Engineering_Internship_prep\Projects\PG-ECOMMERCE-ELT-PIPELINE\Makefile
-
 # Data generation
 faker==37.1.0
-psycopg2-binary==2.9.10
+psycopg2-binary==2.9.11
 
 # AWS
 boto3==1.38.0
