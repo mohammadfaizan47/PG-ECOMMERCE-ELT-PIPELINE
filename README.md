@@ -13,7 +13,7 @@ into a cloud data lake, transformed through a medallion architecture (Bronze →
 validated for quality, and orchestrated end-to-end — mirroring how real companies build 
 scalable, production-grade data infrastructure.
 
-Tech Stack:
+## Tech Stack:
 ```text
 Data Generation     : Python, Faker
 Source Database     : AWS RDS (PostgreSQL 18)
