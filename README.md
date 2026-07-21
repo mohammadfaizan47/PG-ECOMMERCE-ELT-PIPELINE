@@ -1,5 +1,5 @@
 # PG-ECOMMERCE-ELT-PIPELINE
-Production-Grade E-Commerce ELT Pipeline - "Batch ELT with Managed SaaS Stack" \
+Project Name → Production-Grade E-Commerce ELT Pipeline - "Batch ELT with Managed SaaS Stack" \
 \
 A production-grade ELT (Extract, Load, Transform) data pipeline simulating a real-world 
 e-commerce platform's backend data infrastructure. Built to demonstrate practical data 
