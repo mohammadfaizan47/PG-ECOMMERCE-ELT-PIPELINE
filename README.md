@@ -6,6 +6,13 @@ e-commerce platform's backend data infrastructure. Built to demonstrate practica
 engineering skills — from data generation and ingestion to transformation, orchestration, 
 and quality monitoring — using a mix of managed SaaS tools and open-source frameworks.
 
+## Project Goal 
+Simulate an e-commerce company's data platform where transactional data (users, products, 
+orders, order items, inventory) is generated, stored in a relational database, replicated 
+into a cloud data lake, transformed through a medallion architecture (Bronze → Silver → Gold), 
+validated for quality, and orchestrated end-to-end — mirroring how real companies build 
+scalable, production-grade data infrastructure.
+
 Tech Stack:
 ```text
 Data Generation     : Python, Faker
