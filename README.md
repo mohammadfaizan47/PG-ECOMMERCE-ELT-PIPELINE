@@ -22,5 +22,7 @@ Storage         : AWS S3
 Transformation  : Databricks (Pyspark, SQL)
 Data Quality    : Great Expectations
 Governance      : Unity Catalog
+Orchestration   : Apache Airflow (self-hosted, Docker)
+CI/CD           : Github Actions
 
 ```
