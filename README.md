@@ -15,15 +15,15 @@ scalable, production-grade data infrastructure.
 
 ## Tech Stack:
 ```
-Data Generation : Python, Faker
-Source Database : AWS RDS (PostgreSQL 18)
-Ingestion / EL  : Fivetran (query-based incremental sync via 'updated_at' cursor)
-Storage         : AWS S3
-Transformation  : Databricks (Pyspark, SQL)
-Data Quality    : Great Expectations
-Governance      : Unity Catalog
-Orchestration   : Apache Airflow (self-hosted, Docker)
-CI/CD           : Github Actions
+Data Generation      : Python, Faker
+Source Database      : AWS RDS (PostgreSQL 18)
+Ingestion / EL       : Fivetran (query-based incremental sync via 'updated_at' cursor)
+Storage              : AWS S3
+Transformation       : Databricks (Pyspark, SQL)
+Data Quality         : Great Expectations
+Governance           : Unity Catalog
+Orchestration        : Apache Airflow (self-hosted, Docker)
+CI/CD                : Github Actions
 Secrets Management   : AWS Secrets Manager
 Testing              : Pytest
 Version Control      : Git, Github
